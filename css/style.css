@@ -1,0 +1,277 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* font-family: 'Bebas Neue', cursive;  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* font-family: 'Lato', sans-serif; */
+
+
+
+:root {
+    --primary-dark-color: #252422;
+    --primary-blue-color: #3b5998;
+    --primary-orange-color: #f95738;
+    --secondary-orange-color: #ee964b;
+    --secondary-color: #f2f3ae;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    background: #fffcf2;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+/* Utilities */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-dark-color);
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+img {
+    width: 70%;
+}
+
+.logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+}
+
+.bg-dark {
+    background: var(--primary-dark-color);
+    color: #fff;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-orange-color);
+}
+
+
+.btn {
+    background: var(--primary-blue-color);
+    color: #cdedf6;
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #cdedf6;
+    color: var(--primary-dark-color);
+}
+
+.btn-light {
+    background: var(--secondary-orange-color);
+    color: var(--secondary-color);
+}
+
+span {
+    background: var(--primary-blue-color);
+    color: var(--secondary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+}
+
+
+/* Navbar */
+#navbar {
+    background: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+
+}
+
+#navbar .container ul {
+    display: flex;
+}
+
+#navbar .container ul li {
+    margin-left: 1.7rem;
+    font-weight: 400;
+}
+
+#navbar a {
+    font-size: 1.1rem;
+    padding: .3rem .5rem;
+    transition: all 0.2s ease-in;
+}
+
+#navbar a:hover {
+    background: var(--secondary-orange-color);
+    color: var(--secondary-color);
+    padding: .3rem .5rem;
+    border-radius: 5px;
+}
+
+/* Header */
+#showcase .showcase-container {
+    display: flex;
+    width: 100%;
+    height: 600px;
+}
+
+
+#showcase .showcase-content {
+    margin: auto;
+    padding: 0 3rem;
+}
+
+#showcase .showcase-content h2 {
+    font-size: 3rem;
+}
+
+#showcase .showcase-content h3 {
+    font-size: 1rem;
+    padding-bottom: 1.8rem;
+}
+
+#showcase .showcase-content a {
+    margin-bottom: 1rem;
+}
+
+
+/* Job Section */
+#latest-section .card {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+#latest-section {
+    padding: 1rem 1.1rem;
+}
+
+#latest-section .latest-container h2 {
+    padding: 2rem 0;
+    font-size: 2rem;
+}
+
+#latest-section .card:hover {
+    background-color: #cdedf6;
+}
+
+/* Company */
+
+#company-section .container h2 {
+    padding: 2rem 0;
+    font-size: 2rem;
+}
+
+#company-section .container {
+    padding-bottom: 2rem;
+}
+
+#company-section .company-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+#company-section .company-container h3 {
+    padding-bottom: .55rem;
+}
+
+#showcase .showcase-form input {
+    padding: 0.8rem 1.5rem;
+}
+
+#main-footer {
+    padding: 2rem 0;
+    background: var(--primary-dark-color);
+    color: #fff;
+    text-align: center;
+    align-items: center;
+}
+
+@media(max-width: 900px) {
+    #showcase .showcase-container {
+        flex-direction: row;
+    }
+
+    #showcase .showcase-container img {
+        display: none;
+    }
+
+    #showcase .showcase-container img {
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 760px) {
+    #showcase .showcase-container {
+        flex-direction: row;
+    }
+
+    #showcase .showcase-container img {
+        display: none;
+    }
+
+
+    #navbar .container {
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    #navbar .container a {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #navbar ul {
+        padding-top: 1rem;
+    }
+
+    #latest-section .card {
+        display: flex;
+        border-bottom: 1px dotted var(--primary-dark-color);
+        padding: 1.5rem;
+    }
+}
